@@ -1,0 +1,51 @@
+body {
+  background-color: #ffffd4;
+}
+
+h1 {
+  color: brown;
+  font-weight: 600;
+}
+
+.burger-img {
+  width:200px;
+  margin: 15px 0;
+}
+
+.burger-container {
+  margin: 10px 0;
+}
+
+.burger-add {
+  margin-bottom: 20px;
+}
+
+ol {
+  -webkit-padding-start: 0;
+}
+
+li {
+  font-size: 16px;
+}
+
+.list-group-item {
+  background-color: #612d0a;
+  border: 1px solid #cc7d48;
+  color: #fff;
+  padding: 15px;
+}
+
+.list-group-item:hover {
+  background-color: #cc7d48;
+}
+
+.list-group-item button {
+  margin-top: -4px;
+}
+
+@media screen and (max-width: 767px) {
+  .burger-add button {
+    margin-top:10px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+
+<div class="container">
+  <div class="row">
+    <center><img src="/assets/img/burger.png" class="burger-img img-responsive" alt=""></center>
+    <h1 class="text-center">EAT DA BURGER</h1>
+
+    <div class="burger-container col-xs-12">
+      <div class="row">
+
+        <div class="burger-add col-xs-12 text-center">
+          <h4>Add a Burger</h4>
+          <form class="update-form" action="burgers/create" method="POST">
+            <div class="form-inline">
+              <div class="form-group">
+                <input class="form-control" type="text" name="burger_name" />
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <ol class="notDevoured">
+          {{#each burgers}}
+            {{#unless devoured}}
+
+              <li class="list-group-item">{{burger_name}}  <form class="pull-right" action="burgers/update/{{id}}?_method=PUT" method="POST"><input type="hidden" name="devoured" value="1"><button type="submit" class="devourer btn btn-default btn-sm">Devour!</button></form></li>
+
+            {{/unless}}
+          {{/each}}
+        </ol>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <ol class="devoured">
+          {{#each burgers}}
+            {{#if devoured}}
+
+              <li class="list-group-item">{{burger_name}}</li>
+
+            {{/if}}
+          {{/each}}
+          </ol>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
